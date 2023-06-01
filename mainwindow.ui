@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>576</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1024</width>
+    <height>576</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="sizeIncrement">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1024</width>
+      <height>576</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>1024</width>
+      <height>574</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="playbutton">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>230</y>
+      <width>262</width>
+      <height>82</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>70</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+				    cursor: pointer;
+                    outline: 0;
+                    color: #fff;
+                    background-color: #111110;
+                    border-radius: 25px;
+                    line-height: 1.5;
+                    text-align: center;
+					color: #ffa800;
+                    padding: 6px 12px;
+					font: 800 25pt &quot;Montserrat&quot;;
+					letter-spacing: 2px;
+                    transition-property: background-color,border-color,color,box-shadow,filter;
+                    transition-duration: .3s;
+   
+}
+QPushButton:hover {
+    background-color:  #0d0c0c;
+	color: #ffc000;
+
+}</string>
+    </property>
+    <property name="text">
+     <string>ИГРАТЬ</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>400</y>
+      <width>1024</width>
+      <height>576</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>1024</width>
+      <height>574</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="question">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>220</y>
+      <width>751</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">padding: 10px;
+border: 3x solid #000000;
+background-color: #111110;
+border-radius: 25px;
+text-align: center;
+color: white;
+font: 800 18pt &quot;Montserrat&quot;;
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>422</x>
+      <y>320</y>
+      <width>193</width>
+      <height>39</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox {
+				    cursor: pointer;
+                    outline: none;
+                    color: #fff;
+                    background-color: #111110;
+                    border-radius: 25px;
+                    line-height: 1.5;
+                    text-align: center;
+					color: #ffa800;
+                    padding: 6px 12px;
+					font: 800 15pt &quot;Montserrat&quot;;
+					letter-spacing: 2px;
+                    transition-property: background-color,border-color,color,box-shadow,filter;
+                    transition-duration: .3s;
+   
+}
+QComboBox:pressed {
+    background-color:  #0d0c0c;
+	color: #ffc000;
+
+}
+
+QComboBox QAbstractItemView {
+    background-color:  #0d0c0c;
+	color: #ffc000;
+	outline: none;
+}
+
+QComboBox QAbstractItemView:item:hover {
+    background-color: #131212;
+	color: #ffc000;
+	outline: none;
+}</string>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QComboBox::AdjustToContents</enum>
+    </property>
+    <item>
+     <property name="text">
+      <string>РАНДОМ</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>ГЕОГРАФИЯ</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>ИСТОРИЯ</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>ПОЛИТИКА</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="answerbutton">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>340</y>
+      <width>341</width>
+      <height>70</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>70</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+				    cursor: pointer;
+                    outline: 0;
+                    color: #fff;
+                    background-color: #111110;
+                    border-radius: 25px;
+                    line-height: 1.5;
+                    text-align: center;
+					color: #ffa800;
+                    padding: 6px 12px;
+					font: 800 13pt &quot;Montserrat&quot;;
+					letter-spacing: 2px;
+                    transition-property: background-color,border-color,color,box-shadow,filter;
+                    transition-duration: .3s;
+   
+}
+QPushButton:hover {
+    background-color:  #0d0c0c;
+	color: #ffc000;
+
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="answerbutton_2">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>340</y>
+      <width>341</width>
+      <height>70</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>70</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+				    cursor: pointer;
+                    outline: 0;
+                    color: #fff;
+                    background-color: #111110;
+                    border-radius: 25px;
+                    line-height: 1.5;
+                    text-align: center;
+					color: #ffa800;
+                    padding: 6px 12px;
+					font: 800 13pt &quot;Montserrat&quot;;
+					letter-spacing: 2px;
+                    transition-property: background-color,border-color,color,box-shadow,filter;
+                    transition-duration: .3s;
+   
+}
+QPushButton:hover {
+    background-color:  #0d0c0c;
+	color: #ffc000;
+
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="answerbutton_3">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>420</y>
+      <width>341</width>
+      <height>70</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>70</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+				    cursor: pointer;
+                    outline: 0;
+                    color: #fff;
+                    background-color: #111110;
+                    border-radius: 25px;
+                    line-height: 1.5;
+                    text-align: center;
+					color: #ffa800;
+                    padding: 6px 12px;
+					font: 800 13pt &quot;Montserrat&quot;;
+					letter-spacing: 2px;
+                    transition-property: background-color,border-color,color,box-shadow,filter;
+                    transition-duration: .3s;
+   
+}
+QPushButton:hover {
+    background-color:  #0d0c0c;
+	color: #ffc000;
+
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="answerbutton_4">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>420</y>
+      <width>341</width>
+      <height>70</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>70</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+				    cursor: pointer;
+                    outline: 0;
+                    color: #fff;
+                    background-color: #111110;
+                    border-radius: 25px;
+                    line-height: 1.5;
+                    text-align: center;
+					color: #ffa800;
+                    padding: 6px 12px;
+					font: 800 13pt &quot;Montserrat&quot;;
+					letter-spacing: 2px;
+                    transition-property: background-color,border-color,color,box-shadow,filter;
+                    transition-duration: .3s;
+   
+}
+QPushButton:hover {
+    background-color:  #0d0c0c;
+	color: #ffc000;
+
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="test">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>170</y>
+      <width>49</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="question_name">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>160</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 800 25pt &quot;Montserrat&quot;;
+color: #111110;</string>
+    </property>
+    <property name="text">
+     <string>ВОПРОС</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="question_num">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>160</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 800 25pt &quot;Montserrat&quot;;
+color: #111110;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="pointdisplay">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>40</y>
+      <width>291</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">padding: 10px;
+border: 3x solid #000000;
+background-color: #111110;
+border-radius: 25px;
+text-align: center;
+color: white;
+font: 800 18pt &quot;Montserrat&quot;;
+</string>
+    </property>
+    <property name="text">
+     <string>КОЛ.-ВО ОЧКОВ -</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="points">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>50</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 800 18pt &quot;Montserrat&quot;;
+color: #ffa800;</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="timerlabel">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>40</y>
+      <width>61</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">padding: 10px;
+border: 3x solid #000000;
+background-color: #111110;
+border-radius: 25px;
+text-align: center;
+color: #ffa800;
+font: 800 18pt &quot;Montserrat&quot;;
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="timetext">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>40</y>
+      <width>131</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">padding: 10px;
+border: 3x solid #000000;
+background-color: #111110;
+border-radius: 25px;
+text-align: center;
+color: white;
+font: 800 18pt &quot;Montserrat&quot;;
+</string>
+    </property>
+    <property name="text">
+     <string>ВРЕМЯ:</string>
+    </property>
+   </widget>
+   <zorder>label</zorder>
+   <zorder>label_2</zorder>
+   <zorder>comboBox</zorder>
+   <zorder>question</zorder>
+   <zorder>playbutton</zorder>
+   <zorder>answerbutton</zorder>
+   <zorder>answerbutton_2</zorder>
+   <zorder>answerbutton_3</zorder>
+   <zorder>answerbutton_4</zorder>
+   <zorder>test</zorder>
+   <zorder>question_name</zorder>
+   <zorder>question_num</zorder>
+   <zorder>pointdisplay</zorder>
+   <zorder>points</zorder>
+   <zorder>timerlabel</zorder>
+   <zorder>timetext</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

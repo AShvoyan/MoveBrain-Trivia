@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/new/img">
+        <file>C:/Users/Ashot/Desktop/MoveBrain/background.gif</file>
+        <file>C:/Users/Ashot/Desktop/MoveBrain/background.jpg</file>
+        <file>C:/Users/Ashot/Desktop/MoveBrain/logo.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>C:/Users/Ashot/Desktop/MoveBrain/logo.png</file>
+    </qresource>
+</RCC>
