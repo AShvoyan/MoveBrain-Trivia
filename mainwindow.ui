@@ -567,6 +567,64 @@ font: 800 18pt &quot;Montserrat&quot;;
      <string>ВРЕМЯ:</string>
     </property>
    </widget>
+   <widget class="QComboBox" name="gamemode">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>185</y>
+      <width>176</width>
+      <height>39</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox {
+				    cursor: pointer;
+                    outline: none;
+                    color: #fff;
+                    background-color: #111110;
+                    border-radius: 25px;
+                    line-height: 1.5;
+                    text-align: center;
+					color: #ffa800;
+                    padding: 6px 12px;
+					font: 800 15pt &quot;Montserrat&quot;;
+					letter-spacing: 2px;
+                    transition-property: background-color,border-color,color,box-shadow,filter;
+                    transition-duration: .3s;
+   
+}
+QComboBox:pressed {
+    background-color:  #0d0c0c;
+	color: #ffc000;
+
+}
+
+QComboBox QAbstractItemView {
+    background-color:  #0d0c0c;
+	color: #ffc000;
+	outline: none;
+}
+
+QComboBox QAbstractItemView:item:hover {
+    background-color: #131212;
+	color: #ffc000;
+	outline: none;
+}</string>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QComboBox::AdjustToContents</enum>
+    </property>
+    <item>
+     <property name="text">
+      <string>ОБЫЧНЫЙ</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>БЛИЦ</string>
+     </property>
+    </item>
+   </widget>
    <zorder>label</zorder>
    <zorder>label_2</zorder>
    <zorder>comboBox</zorder>
@@ -583,6 +641,7 @@ font: 800 18pt &quot;Montserrat&quot;;
    <zorder>points</zorder>
    <zorder>timerlabel</zorder>
    <zorder>timetext</zorder>
+   <zorder>gamemode</zorder>
   </widget>
  </widget>
  <resources/>

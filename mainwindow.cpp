@@ -75,6 +75,7 @@ void MainWindow::on_playbutton_pressed()
     //закрыть видимость кнопок играть и темы
     ui->playbutton->setVisible(false);
     ui->comboBox->setVisible(false);
+    ui->gamemode->setVisible(false);
 
 }
 
@@ -108,7 +109,12 @@ void MainWindow::displayQuestion(int questionIndex)
     ui->timetext->setVisible(true);
 
     //таймер
-    remainingTime = 30;
+    if(ui->gamemode->currentIndex() == 0) {
+        remainingTime = 30;
+    }
+    else {
+        remainingTime = 5;
+    }
     timer->start(1000);
 
     if (ui->comboBox->currentIndex() == 0) {
@@ -201,6 +207,7 @@ void MainWindow::onAnswerButtonClicked() {
         // Show the play button again to return to the menu screen
         ui->comboBox->setVisible(true);
         ui->playbutton->setVisible(true);
+        ui->gamemode->setVisible(true);
 
     } else {
         // Increment the current question index for the next iteration
