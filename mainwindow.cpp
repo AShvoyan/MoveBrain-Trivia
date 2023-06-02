@@ -10,10 +10,10 @@
 #include <QWidget>
 #include <QPixmap> //для изображений
 #include <QLabel>
-#include <QMovie> //для гифок
 #include <QPushButton>
 #include <QRandomGenerator> //для рандомных чисел
 #include <QTimer>
+
 #include <windows.h>
 
 using json = nlohmann::json;
@@ -60,8 +60,6 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_playbutton_clicked(){}
-
 //после нажатия на кнопку ИГРАТЬ
 void MainWindow::on_playbutton_pressed()
 {
@@ -72,7 +70,7 @@ void MainWindow::on_playbutton_pressed()
     ui->points->setText(start_points);
 
 
-    //закрыть видимость кнопок играть и темы
+    //закрыть видимость кнопок играть, темы и режима
     ui->playbutton->setVisible(false);
     ui->comboBox->setVisible(false);
     ui->gamemode->setVisible(false);
@@ -93,7 +91,7 @@ void MainWindow::onTimerExpired()
     }
 }
 
-void MainWindow::displayQuestion(int questionIndex)
+void MainWindow::displayQuestion(unsigned int questionIndex)
 {
 
     ui->question->setVisible(true);
@@ -132,6 +130,10 @@ void MainWindow::displayQuestion(int questionIndex)
     else if(ui->comboBox->currentIndex() == 3) {
         std::ifstream pol("C:\\Users\\Ashot\\Desktop\\MoveBrain\\QuestionsJSON\\questions_politics.json");
         data = json::parse(pol);
+    }
+    else if(ui->comboBox->currentIndex() == 4) {
+        std::ifstream rau("C:\\Users\\Ashot\\Desktop\\MoveBrain\\QuestionsJSON\\questions_rau.json");
+        data = json::parse(rau);
     }
 
     if (questionIndex >= 0 && questionIndex < data.size())
@@ -179,8 +181,8 @@ void MainWindow::onAnswerButtonClicked() {
     {
         // Increment the point_count variable
         point_count++;
-        ui->points->setText(points);
     }
+    ui->points->setText(points);
 
     if (currentQuestionIndex >= 9) {
 
